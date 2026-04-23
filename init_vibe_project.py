@@ -106,7 +106,6 @@ def main():
             
         if not any_ide_flag or args.cursor or args.windsurf:
             copy_template_dir(".cursor", project_path)
-            copy_template_file(".cursorrules", project_path)
             
         if not any_ide_flag or args.gemini:
             copy_template_dir(".gemini", project_path)

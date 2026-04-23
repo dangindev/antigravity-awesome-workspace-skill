@@ -48,7 +48,7 @@ jobs:
       run: |
         node bin/cli.js test-cursor-app --cursor
         test -d test-cursor-app/.cursor
-        test -f test-cursor-app/.cursorrules
+        test -d test-cursor-app/.cursor/rules
         if [ -d "test-cursor-app/.claude" ]; then exit 1; fi
 
   docker-check:
