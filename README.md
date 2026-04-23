@@ -555,13 +555,13 @@ This template is inspired by and references these outstanding open-source projec
 <table>
 <tr>
 <td align="center" width="120">
-<a href="https://github.com/AffaanMustafa/everything-claude-code">
+<a href="https://github.com/affaan-m/everything-claude-code">
 <img src="https://img.shields.io/github/stars/AffaanMustafa/everything-claude-code?style=social" alt="Stars"/>
 </a>
 </td>
 <td>
 
-**[Everything Claude Code](https://github.com/AffaanMustafa/everything-claude-code)** — The performance optimization system for AI agent harnesses. 47 agents, 181 skills, 79 commands, hooks, MCP configs. Anthropic Hackathon Winner.
+**[Everything Claude Code](https://github.com/affaan-m/everything-claude-code)** — The performance optimization system for AI agent harnesses. 47 agents, 181 skills, 79 commands, hooks, MCP configs. Anthropic Hackathon Winner.
 
 </td>
 </tr>
@@ -682,7 +682,7 @@ If this workspace template saves you hours of setup time, **please consider star
 
 ### ⭐ Star the Referenced Projects Too!
 
-<a href="https://github.com/AffaanMustafa/everything-claude-code"><img src="https://img.shields.io/github/stars/AffaanMustafa/everything-claude-code?style=social&label=Everything%20Claude%20Code" alt="ECC Stars"/></a>
+<a href="https://github.com/affaan-m/everything-claude-code"><img src="https://img.shields.io/github/stars/AffaanMustafa/everything-claude-code?style=social&label=Everything%20Claude%20Code" alt="ECC Stars"/></a>
 &nbsp;&nbsp;
 <a href="https://github.com/addyosmani/agent-skills"><img src="https://img.shields.io/github/stars/addyosmani/agent-skills?style=social&label=Agent%20Skills" alt="Agent Skills Stars"/></a>
 &nbsp;&nbsp;
