@@ -107,14 +107,9 @@ cp -r agents/ commands/ hooks/ references/ /your-project/
 
 ### Development Lifecycle
 
-```
-  DEFINE          PLAN           BUILD          VERIFY         REVIEW          SHIP
- ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐      ┌──────┐
- │ Idea │ ───▶ │ Spec │ ───▶ │ Code │ ───▶ │ Test │ ───▶ │  QA  │ ───▶ │  Go  │
- │Refine│      │  PRD │      │ Impl │      │Debug │      │ Gate │      │ Live │
- └──────┘      └──────┘      └──────┘      └──────┘      └──────┘      └──────┘
-  /spec          /plan          /build        /test         /review       /ship
-```
+<div align="center">
+<img src="assets/images/lifecycle.png" alt="Development Lifecycle: DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP" width="800"/>
+</div>
 
 Each phase has **dedicated skills, agents, and commands** that activate automatically.
 
