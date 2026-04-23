@@ -21,3 +21,4 @@ Apply the `agent-sort` skill.
 - Classify ECC surfaces with concrete repo evidence.
 - Keep the result to DAILY vs LIBRARY.
 - If an install change is needed afterward, hand off to `configure-ecc` instead of re-implementing install logic here.
+ 
