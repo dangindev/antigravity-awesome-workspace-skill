@@ -5,6 +5,11 @@ import shutil
 import argparse
 from pathlib import Path
 
+# Ensure stdout uses UTF-8 to prevent UnicodeEncodeError on Windows when printing emojis
+if sys.stdout.encoding.lower() != 'utf-8':
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+
 # Root directory containing the template (directory of this script)
 TEMPLATE_ROOT = Path(__file__).parent.resolve()
 
