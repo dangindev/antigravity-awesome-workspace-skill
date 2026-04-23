@@ -15,3 +15,4 @@ ECC is designed so specialists are invoked proactively: planners for implementat
 
 ## Cross-Harness Vision
 This gitagent surface is an initial portability layer for ECC's shared identity, governance, and skill catalog. Native agents, commands, and hooks remain authoritative in the repository until full manifest coverage is added.
+ 
