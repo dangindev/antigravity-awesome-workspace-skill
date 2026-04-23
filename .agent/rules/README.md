@@ -109,3 +109,4 @@ When language-specific rules and common rules conflict, **language-specific rule
 Rules in `rules/common/` that may be overridden by language-specific files are marked with:
 
 > **Language note**: This rule may be overridden by language-specific rules for languages where this pattern is not idiomatic.
+ 
