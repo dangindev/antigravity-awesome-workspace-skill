@@ -27,3 +27,4 @@ Before acting:
 1. Read `AGENTS.md`.
 2. For spec or proposal work, follow `openspec/AGENTS.md`.
 3. Load project context from `CONTEXT.md`, `.antigravity/`, and `mission.md` only as needed.
+ 
