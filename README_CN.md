@@ -231,20 +231,33 @@ cp -r skill_library/some-skill/ my-project/.agent/skills/
 
 ---
 
-## 🏗️ 多 IDE 支持 (Multi-IDE)
+## 🛠️ 选择您的工具 (Choose Your Tool)
 
-此模板兼容所有主流 AI 编程 IDE：
+此模板与框架无关。通过 `python init_vibe_project.py` 初始化后，请以宿主 IDE 期望的方式使用相同的文件。
 
-| IDE | 配置文件 | 工作原理 |
-|-----|------------|--------------|
-| **Antigravity** | `.agent/` | 原生 `.agent/rules/`, `.agent/skills/`, `.agent/workflows/` |
-| **Claude Code** | `CLAUDE.md`, `.claude/` | 命令、代理、钩子、插件 |
-| **Cursor** | `.cursorrules` | 通过光标配置注入的规则 |
-| **Gemini CLI** | `.gemini/GEMINI.md` | 原生 Gemini 指令 |
-| **Kiro** | `.kiro/` | 原生 Kiro 技能 |
-| **Codex** | `AGENTS.md` | 代理定义 |
-| **Windsurf** | `.cursorrules` | 兼容 Cursor 的格式 |
-| **OpenCode** | `.opencode/` | OpenCode 插件 |
+| 工具 | 注入的配置 | 首次使用示例 |
+| ---- | --------------- | --------- |
+| **Claude Code** | `CLAUDE.md`, `.claude/` | `>> /plan help me plan a SaaS MVP` |
+| **Cursor** | `.cursorrules`, `.cursor/rules/` | `@planner help me plan a SaaS MVP` |
+| **Windsurf** | `.cursorrules`, `AGENTS.md` | `@planner help me plan a SaaS MVP` |
+| **Gemini CLI** | `.gemini/GEMINI.md` | `Use planner to plan a SaaS MVP` |
+| **Codex CLI** | `AGENTS.md` | `Use planner to plan a SaaS MVP` |
+| **Antigravity** | `.agent/` | `Use @planner to plan a SaaS MVP` |
+| **Kiro CLI** | `.kiro/` | `Use planner to plan a SaaS MVP` |
+| **GitHub Copilot** | `AGENTS.md` | `Ask Copilot to use planner to plan a SaaS MVP` |
+| **OpenCode** | `.opencode/` | `opencode run @planner help me plan a SaaS MVP` |
+
+### 验证安装 (Verify the install)
+
+```bash
+test -d .agent/skills && echo "✅ Vibe Code Workspace initialized successfully!"
+```
+
+### 运行您的第一个命令 (Run your first command)
+
+```text
+使用 `/plan` 命令或请求 `planner` 代理集思广益规划一个 SaaS MVP。
+```
 
 ---
 

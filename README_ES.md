@@ -231,20 +231,33 @@ Esta plantilla incluye una infraestructura de seguridad completa:
 
 ---
 
-## 🏗️ Soporte Multi-IDE
+## 🛠️ Elige tu herramienta (Choose Your Tool)
 
-Esta plantilla funciona en los principales IDEs de codificación con IA:
+Esta plantilla es agnóstica al marco de trabajo. Una vez inicializada a través de `python init_vibe_project.py`, utiliza el mismo repositorio en la forma que tu IDE espera.
 
-| IDE | Archivo de Config | Cómo Funciona |
-|-----|------------|--------------|
-| **Antigravity** | `.agent/` | Reglas nativas en `.agent/rules/`, `.agent/skills/`, `.agent/workflows/` |
-| **Claude Code** | `CLAUDE.md`, `.claude/` | Comandos, agentes, hooks, plugin |
-| **Cursor** | `.cursorrules` | Reglas inyectadas a través de la configuración |
-| **Gemini CLI** | `.gemini/GEMINI.md` | Instrucciones nativas de Gemini |
-| **Kiro** | `.kiro/` | Habilidades nativas de Kiro |
-| **Codex** | `AGENTS.md` | Definiciones de agentes |
-| **Windsurf** | `.cursorrules` | Formato compatible con Cursor |
-| **OpenCode** | `.opencode/` | Plugin OpenCode |
+| Herramienta | Config Inyectada | Primer Uso |
+| ---- | --------------- | --------- |
+| **Claude Code** | `CLAUDE.md`, `.claude/` | `>> /plan help me plan a SaaS MVP` |
+| **Cursor** | `.cursorrules`, `.cursor/rules/` | `@planner help me plan a SaaS MVP` |
+| **Windsurf** | `.cursorrules`, `AGENTS.md` | `@planner help me plan a SaaS MVP` |
+| **Gemini CLI** | `.gemini/GEMINI.md` | `Use planner to plan a SaaS MVP` |
+| **Codex CLI** | `AGENTS.md` | `Use planner to plan a SaaS MVP` |
+| **Antigravity** | `.agent/` | `Use @planner to plan a SaaS MVP` |
+| **Kiro CLI** | `.kiro/` | `Use planner to plan a SaaS MVP` |
+| **GitHub Copilot** | `AGENTS.md` | `Ask Copilot to use planner to plan a SaaS MVP` |
+| **OpenCode** | `.opencode/` | `opencode run @planner help me plan a SaaS MVP` |
+
+### Verifica la instalación (Verify the install)
+
+```bash
+test -d .agent/skills && echo "✅ Vibe Code Workspace initialized successfully!"
+```
+
+### Ejecuta tu primer comando (Run your first command)
+
+```text
+Usa el comando `/plan` o pide al agente `planner` que planifique un SaaS MVP.
+```
 
 ---
 

@@ -231,20 +231,33 @@ Template này bao gồm hạ tầng bảo mật toàn diện:
 
 ---
 
-## 🏗️ Hỗ trợ đa IDE (Multi-IDE)
+## 🛠️ Lựa chọn Công cụ (Choose Your Tool)
 
-Template này hoạt động tốt với mọi IDE lập trình AI lớn:
+Template này không phụ thuộc vào nền tảng. Sau khi khởi tạo bằng `python init_vibe_project.py`, hãy sử dụng IDE theo cách mà nó hỗ trợ.
 
-| IDE | File cấu hình | Cách thức hoạt động |
-|-----|------------|--------------|
-| **Antigravity** | `.agent/` | Native `.agent/rules/`, `.agent/skills/`, `.agent/workflows/` |
-| **Claude Code** | `CLAUDE.md`, `.claude/` | Lệnh, agents, hooks, plugin |
-| **Cursor** | `.cursorrules` | Các rule được inject thông qua cấu hình cursor |
-| **Gemini CLI** | `.gemini/GEMINI.md` | Hướng dẫn gốc cho Gemini |
-| **Kiro** | `.kiro/` | Native Kiro skills |
-| **Codex** | `AGENTS.md` | Định nghĩa agent |
-| **Windsurf** | `.cursorrules` | Tương thích định dạng của Cursor |
-| **OpenCode** | `.opencode/` | Plugin cho OpenCode |
+| Công cụ | Cấu hình được Inject | Lần sử dụng đầu tiên |
+| ---- | --------------- | --------- |
+| **Claude Code** | `CLAUDE.md`, `.claude/` | `>> /plan help me plan a SaaS MVP` |
+| **Cursor** | `.cursorrules`, `.cursor/rules/` | `@planner help me plan a SaaS MVP` |
+| **Windsurf** | `.cursorrules`, `AGENTS.md` | `@planner help me plan a SaaS MVP` |
+| **Gemini CLI** | `.gemini/GEMINI.md` | `Use planner to plan a SaaS MVP` |
+| **Codex CLI** | `AGENTS.md` | `Use planner to plan a SaaS MVP` |
+| **Antigravity** | `.agent/` | `Use @planner to plan a SaaS MVP` |
+| **Kiro CLI** | `.kiro/` | `Use planner to plan a SaaS MVP` |
+| **GitHub Copilot** | `AGENTS.md` | `Ask Copilot to use planner to plan a SaaS MVP` |
+| **OpenCode** | `.opencode/` | `opencode run @planner help me plan a SaaS MVP` |
+
+### Xác minh cài đặt (Verify the install)
+
+```bash
+test -d .agent/skills && echo "✅ Vibe Code Workspace initialized successfully!"
+```
+
+### Chạy lệnh đầu tiên (Run your first command)
+
+```text
+Sử dụng lệnh `/plan` hoặc yêu cầu agent `planner` lên ý tưởng cho một SaaS MVP.
+```
 
 ---
 

@@ -480,20 +480,33 @@ This template includes comprehensive security infrastructure:
 
 ---
 
-## 🏗️ Multi-IDE Support
+## 🛠️ Choose Your Tool
 
-This template works across every major AI coding IDE:
+This workspace template is framework-agnostic. Once initialized via `python init_vibe_project.py`, use the same repository in the way your host expects.
 
-| IDE | Config File | How It Works |
-|-----|------------|--------------|
-| **Antigravity** | `.agent/` | Native `.agent/rules/`, `.agent/skills/`, `.agent/workflows/` |
-| **Claude Code** | `CLAUDE.md`, `.claude/` | Commands, agents, hooks, plugin |
-| **Cursor** | `.cursorrules` | Rules injected via cursor config |
-| **Gemini CLI** | `.gemini/GEMINI.md` | Native Gemini instructions |
-| **Kiro** | `.kiro/` | Native Kiro skills |
-| **Codex** | `AGENTS.md` | Agent definitions |
-| **Windsurf** | `.cursorrules` | Compatible with Cursor format |
-| **OpenCode** | `.opencode/` | OpenCode plugin |
+| Tool | Config Injected | First Use |
+| ---- | --------------- | --------- |
+| **Claude Code** | `CLAUDE.md`, `.claude/` | `>> /plan help me plan a SaaS MVP` |
+| **Cursor** | `.cursorrules`, `.cursor/rules/` | `@planner help me plan a SaaS MVP` |
+| **Windsurf** | `.cursorrules`, `AGENTS.md` | `@planner help me plan a SaaS MVP` |
+| **Gemini CLI** | `.gemini/GEMINI.md` | `Use planner to plan a SaaS MVP` |
+| **Codex CLI** | `AGENTS.md` | `Use planner to plan a SaaS MVP` |
+| **Antigravity** | `.agent/` | `Use @planner to plan a SaaS MVP` |
+| **Kiro CLI** | `.kiro/` | `Use planner to plan a SaaS MVP` |
+| **GitHub Copilot** | `AGENTS.md` | `Ask Copilot to use planner to plan a SaaS MVP` |
+| **OpenCode** | `.opencode/` | `opencode run @planner help me plan a SaaS MVP` |
+
+### Verify the install
+
+```bash
+test -d .agent/skills && echo "✅ Vibe Code Workspace initialized successfully!"
+```
+
+### Run your first command
+
+```text
+Use the `/plan` command or ask the `planner` agent to brainstorm a SaaS MVP.
+```
 
 ---
 
