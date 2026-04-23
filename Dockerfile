@@ -1,19 +1,16 @@
-# Build stage
-FROM python:3.12-slim as builder
-
-WORKDIR /app
-
-COPY engine/ engine/
-RUN pip install --user --no-cache-dir ./engine
-
-# Runtime stage
+# Default Dockerfile for your application
 FROM python:3.12-slim
 
 WORKDIR /app
 
-# Copy installed packages from builder
-COPY --from=builder /root/.local /root/.local
-ENV PATH=/root/.local/bin:$PATH
+# Install system dependencies if needed
+# RUN apt-get update && apt-get install -y --no-install-recommends \
+#     build-essential \
+#     && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements or setup files
+# COPY requirements.txt .
+# RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY . .
@@ -21,5 +18,8 @@ COPY . .
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Run the knowledge-hub MCP server against the mounted workspace
-CMD ["ag-mcp", "--workspace", "/app"]
+# Expose port if needed
+# EXPOSE 8000
+
+# Default command
+CMD ["python", "--version"]

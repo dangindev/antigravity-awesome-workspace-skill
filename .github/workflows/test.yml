@@ -1,4 +1,4 @@
-name: Agent CI
+name: Workspace Template CI
 
 on:
   push:
@@ -7,37 +7,52 @@ on:
     branches: [ main ]
 
 jobs:
-  engine-test:
+  python-installer-test:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Python 3.12
+    - name: Set up Python 3.10
       uses: actions/setup-python@v4
       with:
-        python-version: "3.12"
+        python-version: "3.10"
 
-    - name: Install engine dependencies
+    - name: Test init_vibe_project.py
       run: |
-        python -m pip install --upgrade pip
-        pip install "./engine[dev]"
+        python init_vibe_project.py test-app
+        test -d test-app/.agent
+        test -d test-app/commands
+        test -d test-app/agents
+        test -d test-app/docs
+        test -f test-app/mcp_servers.json
 
-    - name: Run engine tests
-      run: |
-        pytest engine/tests/
+  npx-installer-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
 
-    - name: Verify engine entrypoints
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Test npx wrapper (Claude Flag)
       run: |
-        ag-ask --help
-        ag-refresh --help
-        ag-mcp --help
-        python -m antigravity_engine --help
-        python -m antigravity_engine.hub --help
+        node bin/cli.js test-claude-app --claude
+        test -d test-claude-app/.claude
+        test -f test-claude-app/CLAUDE.md
+        if [ -d "test-claude-app/.cursor" ]; then exit 1; fi
+        if [ -d "test-claude-app/.gemini" ]; then exit 1; fi
+
+    - name: Test npx wrapper (Cursor Flag)
+      run: |
+        node bin/cli.js test-cursor-app --cursor
+        test -d test-cursor-app/.cursor
+        test -f test-cursor-app/.cursorrules
+        if [ -d "test-cursor-app/.claude" ]; then exit 1; fi
 
   docker-check:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
 
@@ -49,28 +64,3 @@ jobs:
 
     - name: Build sandbox Dockerfile
       run: docker build -f Dockerfile.sandbox -t ag-sandbox-ci-test .
-
-  cli-check:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: Set up Python 3.12
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.12"
-
-    - name: Install CLI and engine
-      run: |
-        python -m pip install --upgrade pip
-        pip install "./engine[dev]" ./cli
-
-    - name: Run CLI tests
-      run: pytest cli/tests/
-
-    - name: Verify CLI commands
-      run: |
-        ag --help
-        ag ask --help
-        ag refresh --help
