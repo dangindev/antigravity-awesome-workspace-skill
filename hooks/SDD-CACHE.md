@@ -165,3 +165,4 @@ The log captures URL, detected `tool_response` shape, HEAD status, and why each 
 - `curl`
 - `shasum` or `sha256sum` (auto-detected)
 - Bash 3.2+
+ 
