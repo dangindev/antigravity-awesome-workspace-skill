@@ -17,3 +17,4 @@
 1.  **Stateless Tools**: Tools should generally be stateless. Pass necessary context (like IDs or tokens) as arguments.
 2.  **Fail Gracefully**: Tools should return error messages or status codes rather than crashing, allowing the agent to recover.
 3.  **Deep Think Simulation**: When writing complex logic, include comments or a separate design document that outlines the "thought process" or decision tree.
+ 
