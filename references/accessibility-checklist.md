@@ -158,3 +158,4 @@ npx pa11y             # CLI accessibility checker
 | Removing focus outlines | Users can't see where they are | Style outlines, don't remove them |
 | Empty links/buttons | "Link" announced with no description | Add text or `aria-label` |
 | `tabindex > 0` | Breaks natural tab order | Use `tabindex="0"` or `-1` only |
+ 
