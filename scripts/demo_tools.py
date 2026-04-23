@@ -51,3 +51,4 @@ def demo_via_agent_registry():
 if __name__ == "__main__":
     demo_direct_calls()
     demo_via_agent_registry()
+ 
