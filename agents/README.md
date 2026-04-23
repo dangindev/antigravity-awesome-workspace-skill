@@ -118,3 +118,4 @@ Plugin agents do not support `hooks`, `mcpServers`, or `permissionMode` frontmat
 3. Add a **Composition** block at the bottom (Invoke directly when / Invoke via / Do not invoke from another persona).
 4. Add the persona to the table at the top of this file.
 5. If the persona enables a new orchestration pattern, document it in `references/orchestration-patterns.md` rather than inventing the pattern in the persona file itself.
+ 
