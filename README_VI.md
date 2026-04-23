@@ -39,7 +39,7 @@ Ngôn ngữ: [English](README.md) | **Tiếng Việt** | [简体中文](README_C
 Một câu lệnh duy nhất. Mọi IDE. Tất cả kỹ năng. Không bị giới hạn (Zero lock-in).
 
 ```bash
-python init_vibe_project.py my-app
+npx antigravity-awesome-workspace-skill my-app
 # → 26 core skills, 51 agents, 79 commands, 25 MCP servers, Docker, CI/CD, OpenSpec... hoàn tất.
 ```
 
@@ -50,12 +50,8 @@ python init_vibe_project.py my-app
 ### Cách A — Tạo dự án mới (Khuyên dùng)
 
 ```bash
-# Clone template này
-git clone https://github.com/your-org/antigravity-awesome-workspace-skill.git
-cd antigravity-awesome-workspace-skill
-
-# Khởi tạo dự án với đầy đủ bộ Vibe Code
-python init_vibe_project.py my-awesome-app
+# Khởi tạo dự án với bộ công cụ Vibe Code đầy đủ thông qua npx
+npx antigravity-awesome-workspace-skill my-awesome-app
 ```
 
 ```
@@ -233,19 +229,19 @@ Template này bao gồm hạ tầng bảo mật toàn diện:
 
 ## 🛠️ Lựa chọn Công cụ (Choose Your Tool)
 
-Template này không phụ thuộc vào nền tảng. Sau khi khởi tạo bằng `python init_vibe_project.py`, hãy sử dụng IDE theo cách mà nó hỗ trợ.
+Template này không phụ thuộc vào nền tảng. Sử dụng bộ cài đặt npx với các flag để chỉ inject những cấu hình mà IDE của bạn hỗ trợ.
 
-| Công cụ | Cấu hình được Inject | Lần sử dụng đầu tiên |
+| Công cụ | Lệnh cài đặt | Lần sử dụng đầu tiên |
 | ---- | --------------- | --------- |
-| **Claude Code** | `CLAUDE.md`, `.claude/` | `>> /plan help me plan a SaaS MVP` |
-| **Cursor** | `.cursorrules`, `.cursor/rules/` | `@planner help me plan a SaaS MVP` |
-| **Windsurf** | `.cursorrules`, `AGENTS.md` | `@planner help me plan a SaaS MVP` |
-| **Gemini CLI** | `.gemini/GEMINI.md` | `Use planner to plan a SaaS MVP` |
-| **Codex CLI** | `AGENTS.md` | `Use planner to plan a SaaS MVP` |
-| **Antigravity** | `.agent/` | `Use @planner to plan a SaaS MVP` |
-| **Kiro CLI** | `.kiro/` | `Use planner to plan a SaaS MVP` |
-| **GitHub Copilot** | `AGENTS.md` | `Ask Copilot to use planner to plan a SaaS MVP` |
-| **OpenCode** | `.opencode/` | `opencode run @planner help me plan a SaaS MVP` |
+| **Claude Code** | `npx antigravity-awesome-workspace-skill my-app --claude` | `>> /plan help me plan a SaaS MVP` |
+| **Cursor** | `npx antigravity-awesome-workspace-skill my-app --cursor` | `@planner help me plan a SaaS MVP` |
+| **Windsurf** | `npx antigravity-awesome-workspace-skill my-app --windsurf` | `@planner help me plan a SaaS MVP` |
+| **Gemini CLI** | `npx antigravity-awesome-workspace-skill my-app --gemini` | `Use planner to plan a SaaS MVP` |
+| **Codex CLI** | `npx antigravity-awesome-workspace-skill my-app --codex` | `Use planner to plan a SaaS MVP` |
+| **Antigravity** | `npx antigravity-awesome-workspace-skill my-app --antigravity` | `Use @planner to plan a SaaS MVP` |
+| **Kiro CLI** | `npx antigravity-awesome-workspace-skill my-app --kiro` | `Use planner to plan a SaaS MVP` |
+| **OpenCode** | `npx antigravity-awesome-workspace-skill my-app --opencode` | `opencode run @planner help me plan a SaaS MVP` |
+| **Tất cả công cụ** | `npx antigravity-awesome-workspace-skill my-app` | Hoạt động phổ quát cho tất cả các IDE |
 
 ### Xác minh cài đặt (Verify the install)
 

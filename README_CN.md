@@ -50,12 +50,8 @@ python init_vibe_project.py my-app
 ### 选项 A — 创建新项目（推荐）
 
 ```bash
-# 克隆此模板
-git clone https://github.com/your-org/antigravity-awesome-workspace-skill.git
-cd antigravity-awesome-workspace-skill
-
-# 初始化包含完整 Vibe Code 套件的项目
-python init_vibe_project.py my-awesome-app
+# 使用 npx 初始化包含完整 Vibe Code 套件的项目
+npx antigravity-awesome-workspace-skill my-awesome-app
 ```
 
 ```
@@ -233,19 +229,19 @@ cp -r skill_library/some-skill/ my-project/.agent/skills/
 
 ## 🛠️ 选择您的工具 (Choose Your Tool)
 
-此模板与框架无关。通过 `python init_vibe_project.py` 初始化后，请以宿主 IDE 期望的方式使用相同的文件。
+此模板与框架无关。使用带特定标志的 npx 安装程序，以仅注入您的宿主 IDE 期望的配置。
 
-| 工具 | 注入的配置 | 首次使用示例 |
+| 工具 | 安装命令 | 首次使用示例 |
 | ---- | --------------- | --------- |
-| **Claude Code** | `CLAUDE.md`, `.claude/` | `>> /plan help me plan a SaaS MVP` |
-| **Cursor** | `.cursorrules`, `.cursor/rules/` | `@planner help me plan a SaaS MVP` |
-| **Windsurf** | `.cursorrules`, `AGENTS.md` | `@planner help me plan a SaaS MVP` |
-| **Gemini CLI** | `.gemini/GEMINI.md` | `Use planner to plan a SaaS MVP` |
-| **Codex CLI** | `AGENTS.md` | `Use planner to plan a SaaS MVP` |
-| **Antigravity** | `.agent/` | `Use @planner to plan a SaaS MVP` |
-| **Kiro CLI** | `.kiro/` | `Use planner to plan a SaaS MVP` |
-| **GitHub Copilot** | `AGENTS.md` | `Ask Copilot to use planner to plan a SaaS MVP` |
-| **OpenCode** | `.opencode/` | `opencode run @planner help me plan a SaaS MVP` |
+| **Claude Code** | `npx antigravity-awesome-workspace-skill my-app --claude` | `>> /plan help me plan a SaaS MVP` |
+| **Cursor** | `npx antigravity-awesome-workspace-skill my-app --cursor` | `@planner help me plan a SaaS MVP` |
+| **Windsurf** | `npx antigravity-awesome-workspace-skill my-app --windsurf` | `@planner help me plan a SaaS MVP` |
+| **Gemini CLI** | `npx antigravity-awesome-workspace-skill my-app --gemini` | `Use planner to plan a SaaS MVP` |
+| **Codex CLI** | `npx antigravity-awesome-workspace-skill my-app --codex` | `Use planner to plan a SaaS MVP` |
+| **Antigravity** | `npx antigravity-awesome-workspace-skill my-app --antigravity` | `Use @planner to plan a SaaS MVP` |
+| **Kiro CLI** | `npx antigravity-awesome-workspace-skill my-app --kiro` | `Use planner to plan a SaaS MVP` |
+| **OpenCode** | `npx antigravity-awesome-workspace-skill my-app --opencode` | `opencode run @planner help me plan a SaaS MVP` |
+| **所有工具** | `npx antigravity-awesome-workspace-skill my-app` | 跨所有工具通用 |
 
 ### 验证安装 (Verify the install)
 

@@ -39,6 +39,14 @@ def copy_template_file(src_name, dest_path):
 def main():
     parser = argparse.ArgumentParser(description="Initialize an Antigravity Vibe Code project")
     parser.add_argument("project_name", nargs="?", help="Name of the project directory to create")
+    parser.add_argument("--claude", action="store_true", help="Only install Claude Code configurations")
+    parser.add_argument("--cursor", action="store_true", help="Only install Cursor configurations")
+    parser.add_argument("--windsurf", action="store_true", help="Only install Windsurf configurations")
+    parser.add_argument("--gemini", action="store_true", help="Only install Gemini CLI configurations")
+    parser.add_argument("--codex", action="store_true", help="Only install Codex CLI configurations")
+    parser.add_argument("--kiro", action="store_true", help="Only install Kiro IDE configurations")
+    parser.add_argument("--opencode", action="store_true", help="Only install OpenCode configurations")
+    parser.add_argument("--antigravity", action="store_true", help="Only install Antigravity IDE configurations")
     args = parser.parse_args()
 
     project_name = args.project_name
@@ -60,6 +68,15 @@ def main():
         # Create project root directory
         project_path.mkdir(parents=True, exist_ok=False)
 
+        # ──── 2. MONOREPO: Code structure ────
+        (project_path / "apps").mkdir(exist_ok=True)
+        (project_path / "packages").mkdir(exist_ok=True)
+        (project_path / "infra").mkdir(exist_ok=True)
+        print_step("Created monorepo structure (apps/, packages/, infra/)")
+
+        # ──── 3. CI/CD: GitHub Actions & Prompts ────
+        copy_template_dir(".github", project_path)
+
         # ──── 1. CORE: Core architecture directories ────
         copy_template_dir(".antigravity", project_path)     # Memory Engine & Knowledge Hub
         copy_template_dir(".agent", project_path)           # Rules + Workflows + Core Skills
@@ -75,25 +92,29 @@ def main():
         copy_template_dir("contexts", project_path)         # Context modes (dev, research, review)
         copy_template_dir("mcp-configs", project_path)      # Extended MCP: Jira, Supabase, Playwright, Context7...
         copy_template_dir("examples", project_path)         # CLAUDE.md templates (Django, Go, Rust, NextJS...)
-        copy_template_dir(".claude", project_path)          # Claude Code slash commands
-        copy_template_dir(".claude-plugin", project_path)   # Claude plugin config
-        copy_template_dir(".gemini", project_path)          # Gemini IDE config
-        copy_template_dir(".kiro", project_path)            # Kiro IDE config
-        copy_template_dir(".cursor", project_path)          # Cursor rules (Karpathy guidelines)
+        # Check if any specific IDE flag was passed
+        any_ide_flag = any([args.claude, args.cursor, args.windsurf, args.gemini, args.codex, args.kiro, args.opencode, args.antigravity])
 
-        # ──── 2. MONOREPO: Code structure ────
-        (project_path / "apps").mkdir(exist_ok=True)
-        (project_path / "packages").mkdir(exist_ok=True)
-        (project_path / "infra").mkdir(exist_ok=True)
-        print_step("Created monorepo structure (apps/, packages/, infra/)")
-
-        # ──── 3. CI/CD: GitHub Actions & Prompts ────
-        copy_template_dir(".github", project_path)
-
-        # ──── 4. IDE & CONFIG: Bootstrap files for all IDEs ────
-        copy_template_file("AGENTS.md", project_path)
-        copy_template_file("CLAUDE.md", project_path)
-        copy_template_file(".cursorrules", project_path)
+        # ──── 4. IDE & CONFIG: Bootstrap files ────
+        if not any_ide_flag or args.codex or args.windsurf:
+            copy_template_file("AGENTS.md", project_path)
+            
+        if not any_ide_flag or args.claude:
+            copy_template_dir(".claude", project_path)
+            copy_template_dir(".claude-plugin", project_path)
+            copy_template_file("CLAUDE.md", project_path)
+            
+        if not any_ide_flag or args.cursor or args.windsurf:
+            copy_template_dir(".cursor", project_path)
+            copy_template_file(".cursorrules", project_path)
+            
+        if not any_ide_flag or args.gemini:
+            copy_template_dir(".gemini", project_path)
+            
+        if not any_ide_flag or args.kiro:
+            copy_template_dir(".kiro", project_path)
+            
+        # Common configurations for all IDEs
         copy_template_file("mcp_servers.json", project_path)
         copy_template_file("mission.md", project_path)
         copy_template_file(".env.example", project_path)

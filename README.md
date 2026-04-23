@@ -39,7 +39,7 @@ The **most comprehensive AI Agentic Coding workspace template** — a production
 One command. Every IDE. All the skills. Zero lock-in.
 
 ```bash
-python init_vibe_project.py my-app
+npx antigravity-awesome-workspace-skill my-app
 # → 26 core skills, 51 agents, 79 commands, 25 MCP servers, Docker, CI/CD, OpenSpec... done.
 ```
 
@@ -50,12 +50,8 @@ python init_vibe_project.py my-app
 ### Option A — Create a New Project (Recommended)
 
 ```bash
-# Clone this template
-git clone https://github.com/your-org/antigravity-awesome-workspace-skill.git
-cd antigravity-awesome-workspace-skill
-
-# Create a new project with the full Vibe Code suite
-python init_vibe_project.py my-awesome-app
+# Initialize project with the full Vibe Code suite using npx
+npx antigravity-awesome-workspace-skill my-awesome-app
 ```
 
 ```
@@ -482,19 +478,19 @@ This template includes comprehensive security infrastructure:
 
 ## 🛠️ Choose Your Tool
 
-This workspace template is framework-agnostic. Once initialized via `python init_vibe_project.py`, use the same repository in the way your host expects.
+This workspace template is framework-agnostic. Use the installer with specific flags to only inject the configs your host IDE expects.
 
-| Tool | Config Injected | First Use |
+| Tool | Install Command | First Use |
 | ---- | --------------- | --------- |
-| **Claude Code** | `CLAUDE.md`, `.claude/` | `>> /plan help me plan a SaaS MVP` |
-| **Cursor** | `.cursorrules`, `.cursor/rules/` | `@planner help me plan a SaaS MVP` |
-| **Windsurf** | `.cursorrules`, `AGENTS.md` | `@planner help me plan a SaaS MVP` |
-| **Gemini CLI** | `.gemini/GEMINI.md` | `Use planner to plan a SaaS MVP` |
-| **Codex CLI** | `AGENTS.md` | `Use planner to plan a SaaS MVP` |
-| **Antigravity** | `.agent/` | `Use @planner to plan a SaaS MVP` |
-| **Kiro CLI** | `.kiro/` | `Use planner to plan a SaaS MVP` |
-| **GitHub Copilot** | `AGENTS.md` | `Ask Copilot to use planner to plan a SaaS MVP` |
-| **OpenCode** | `.opencode/` | `opencode run @planner help me plan a SaaS MVP` |
+| **Claude Code** | `npx antigravity-awesome-workspace-skill my-app --claude` | `>> /plan help me plan a SaaS MVP` |
+| **Cursor** | `npx antigravity-awesome-workspace-skill my-app --cursor` | `@planner help me plan a SaaS MVP` |
+| **Windsurf** | `npx antigravity-awesome-workspace-skill my-app --windsurf` | `@planner help me plan a SaaS MVP` |
+| **Gemini CLI** | `npx antigravity-awesome-workspace-skill my-app --gemini` | `Use planner to plan a SaaS MVP` |
+| **Codex CLI** | `npx antigravity-awesome-workspace-skill my-app --codex` | `Use planner to plan a SaaS MVP` |
+| **Antigravity** | `npx antigravity-awesome-workspace-skill my-app --antigravity` | `Use @planner to plan a SaaS MVP` |
+| **Kiro CLI** | `npx antigravity-awesome-workspace-skill my-app --kiro` | `Use planner to plan a SaaS MVP` |
+| **OpenCode** | `npx antigravity-awesome-workspace-skill my-app --opencode` | `opencode run @planner help me plan a SaaS MVP` |
+| **All Tools** | `npx antigravity-awesome-workspace-skill my-app` | Works universally across all tools |
 
 ### Verify the install
 
