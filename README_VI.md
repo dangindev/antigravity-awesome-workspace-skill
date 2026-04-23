@@ -6,7 +6,7 @@
 
 ### Mẫu Vibe Code Tối Thượng dành cho Lập trình viên AI
 
-**51 AI Agents · 79 Slash Commands · 25 Core Skills · 1500+ Kho Kỹ năng · 25 MCP Servers**
+**51 AI Agents · 79 Slash Commands · 26 Core Skills · 1500+ Kho Kỹ năng · 25 MCP Servers**
 
 Ngôn ngữ: [English](README.md) | **Tiếng Việt** | [简体中文](README_CN.md) | [Español](README_ES.md)
 
@@ -21,14 +21,93 @@ Ngôn ngữ: [English](README.md) | **Tiếng Việt** | [简体中文](README_C
 
 ## 🎯 Đây là gì?
 
-Đây là **mẫu workspace AI Agentic Coding toàn diện nhất** từng được tạo ra. Nó hợp nhất tinh hoa từ:
+**Mẫu workspace AI Agentic Coding toàn diện nhất** — một bộ khung sản xuất hoàn chỉnh cung cấp mọi thứ bạn cần để xây dựng phần mềm với AI Agents.
 
-| Nguồn | Lấy gì | Stars |
-|-------|--------|-------|
-| [Agent Skills](https://github.com/addyosmani/agent-skills) | Kỹ năng quy trình, personas, orchestration | 30K+ |
-| [Everything Claude Code](https://github.com/AffaanMustafa/everything-claude-code) | 79 lệnh, 48 agents, hooks, MCP, bảo mật | 140K+ |
-| [Antigravity Awesome Skills](https://github.com/dangindev/antigravity-awesome-skills) | 1400+ skills chuyên ngành | — |
-| [Antigravity Workspace Template](https://github.com/study8677/antigravity-workspace-template) | Memory engine, Knowledge Hub, OpenSpec | — |
+Một câu lệnh duy nhất. Mọi IDE. Tất cả kỹ năng. Không bị giới hạn.
+
+```bash
+python init_vibe_project.py my-app
+# → 26 core skills, 51 agents, 79 commands, 25 MCP servers, Docker, CI/CD, OpenSpec... hoàn tất.
+```
+
+---
+
+## 📚 Tham khảo & Nguồn cảm hứng
+
+Template này được truyền cảm hứng và tham khảo từ các dự án mã nguồn mở xuất sắc trong cộng đồng AI coding:
+
+<table>
+<tr>
+<td align="center" width="120">
+<a href="https://github.com/AffaanMustafa/everything-claude-code">
+<img src="https://img.shields.io/github/stars/AffaanMustafa/everything-claude-code?style=social" alt="Stars"/>
+</a>
+</td>
+<td>
+
+**[Everything Claude Code](https://github.com/AffaanMustafa/everything-claude-code)** — Hệ thống tối ưu hiệu suất cho AI agent. 47 agents, 181 skills, 79 commands, hooks, MCP configs. Quán quân Anthropic Hackathon.
+
+</td>
+</tr>
+<tr>
+<td align="center" width="120">
+<a href="https://github.com/addyosmani/agent-skills">
+<img src="https://img.shields.io/github/stars/addyosmani/agent-skills?style=social" alt="Stars"/>
+</a>
+</td>
+<td>
+
+**[Agent Skills](https://github.com/addyosmani/agent-skills)** — Kỹ năng kỹ thuật chuẩn sản xuất bởi Addy Osmani (Google). Triết lý "Process over Prose", quy trình lifecycle, orchestration patterns.
+
+</td>
+</tr>
+<tr>
+<td align="center" width="120">
+<a href="https://github.com/forrestchang/andrej-karpathy-skills">
+<img src="https://img.shields.io/github/stars/forrestchang/andrej-karpathy-skills?style=social" alt="Stars"/>
+</a>
+</td>
+<td>
+
+**[Karpathy Skills](https://github.com/forrestchang/andrej-karpathy-skills)** — Nguyên tắc hành vi dựa trên quan sát của Andrej Karpathy về lỗi của LLM: Think Before Coding, Simplicity First, Surgical Changes, Goal-Driven Execution.
+
+</td>
+</tr>
+<tr>
+<td align="center" width="120">
+<a href="https://github.com/study8677/antigravity-workspace-template">
+<img src="https://img.shields.io/github/stars/study8677/antigravity-workspace-template?style=social" alt="Stars"/>
+</a>
+</td>
+<td>
+
+**[Antigravity Workspace Template](https://github.com/study8677/antigravity-workspace-template)** — Engine tri thức đa tác tử. Swarm protocol, OpenSpec framework.
+
+</td>
+</tr>
+</table>
+
+> Tất cả dự án được tham khảo đều thuộc giấy phép MIT hoặc Apache 2.0. Dự án này thuộc giấy phép MIT.
+
+---
+
+### Quy trình phát triển (Development Lifecycle)
+
+```mermaid
+flowchart LR
+    A["💡 DEFINE\n(/spec)"] --> B["📋 PLAN\n(/plan)"]
+    B --> C["🔨 BUILD\n(/build)"]
+    C --> D["🛡️ VERIFY\n(/test)"]
+    D --> E["🔍 REVIEW\n(/review)"]
+    E --> F["🚀 SHIP\n(/ship)"]
+
+    style A fill:#2e1065,stroke:#8b5cf6,stroke-width:2px,color:#fff
+    style B fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style C fill:#083344,stroke:#06b6d4,stroke-width:2px,color:#fff
+    style D fill:#14532d,stroke:#22c55e,stroke-width:2px,color:#fff
+    style E fill:#78350f,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style F fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#fff
+```
 
 ---
 
@@ -55,7 +134,7 @@ cp .env.example .env    # Điền API keys
 ### Khung cốt lõi (`.agent/`)
 - **28 file luật** cho 15 ngôn ngữ (TypeScript, Python, Go, Rust, Kotlin, Java, C#, C++, Dart, Swift, PHP, Perl...)
 - **9 workflow** step-by-step (lên kế hoạch, review, thiết kế DB, sinh test, refactor, release, OpenSpec)
-- **25 Core Skills** (TDD, Spec-Driven, Security, CI/CD, Architecture, Debugging...)
+- **26 Core Skills** (TDD, Spec-Driven, Security, CI/CD, Architecture, Karpathy Guidelines...)
 
 ### AI Agents (51 chuyên gia)
 - **Kiến trúc sư**: `architect`, `planner`, `chief-of-staff`
@@ -111,6 +190,15 @@ MIT License — xem [LICENSE](LICENSE).
 
 <div align="center">
 
-**Xây dựng với ❤️ cho cộng đồng lập trình viên AI**
+**Made by [Hai-Dang Nguyen](https://nguyenhaidang.io.vn/)** · PhD Student, College of Engineering & Computer Science, [VinUniversity](https://vinuni.edu.vn/)
+
+[![Website](https://img.shields.io/badge/🌐_Website-nguyenhaidang.io.vn-8B5CF6?style=flat-square)](https://nguyenhaidang.io.vn/)
+[![GitHub](https://img.shields.io/badge/GitHub-dangindev-171515?style=flat-square&logo=github)](https://github.com/dangindev)
+
+<sub>Nếu bạn dùng template này trong dự án của bạn, có thể thêm badge sau vào README:</sub>
+
+```markdown
+[![Built with Antigravity](https://img.shields.io/badge/Built_with-Antigravity_Awesome_Workspace-8B5CF6?style=flat-square)](https://github.com/dangindev/antigravity-awesome-workspace-skill)
+```
 
 </div>

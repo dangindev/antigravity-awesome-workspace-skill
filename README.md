@@ -107,9 +107,21 @@ cp -r agents/ commands/ hooks/ references/ /your-project/
 
 ### Development Lifecycle
 
-<div align="center">
-<img src="assets/images/lifecycle.png" alt="Development Lifecycle: DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP" width="800"/>
-</div>
+```mermaid
+flowchart LR
+    A["💡 DEFINE\n(/spec)"] --> B["📋 PLAN\n(/plan)"]
+    B --> C["🔨 BUILD\n(/build)"]
+    C --> D["🛡️ VERIFY\n(/test)"]
+    D --> E["🔍 REVIEW\n(/review)"]
+    E --> F["🚀 SHIP\n(/ship)"]
+
+    style A fill:#2e1065,stroke:#8b5cf6,stroke-width:2px,color:#fff
+    style B fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style C fill:#083344,stroke:#06b6d4,stroke-width:2px,color:#fff
+    style D fill:#14532d,stroke:#22c55e,stroke-width:2px,color:#fff
+    style E fill:#78350f,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style F fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#fff
+```
 
 Each phase has **dedicated skills, agents, and commands** that activate automatically.
 
