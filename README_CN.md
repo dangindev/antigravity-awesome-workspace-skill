@@ -28,18 +28,34 @@
 
 ---
 
-> **融合了 4 个世界顶级 Vibe Code 系统的精华**，整合为一个生产就绪的工作区模板。只需一条命令 `python init_vibe_project.py my-app` 即可获得一切。
+> **融合了 4 个世界顶级 Vibe Code 系统的精华**，整合为一个生产就绪的工作区模板。只需一条命令 `npx antigravity-awesome-workspace-skill my-app` 即可获得一切。
 
 <br/>
 
+## 📑 目录 (Table of Contents)
+
+- [🎯 这是什么？](#-这是什么)
+- [🚀 快速开始](#-快速开始)
+- [🛠️ 选择您的工具](#️-选择您的工具-choose-your-tool)
+- [📐 架构与生命周期](#-架构-architecture)
+- [📦 包含哪些内容？](#-包含哪些内容-whats-included)
+- [📖 技能库](#-技能库-skill-library---1500)
+- [🛡️ 安全](#️-安全)
+- [❓ 常见问题 (FAQ)](#-常见问题-faq)
+- [📚 参考文献与灵感](#-参考文献与灵感)
+
+---
+
 ## 🎯 这是什么？
 
-这是最全面的 **AI 代理编程工作区模板** —— 一个为您提供构建软件所需一切的生产就绪脚手架。
+此工作区消除了原始 AI 工具与生产级软件工程之间的鸿沟。它提供了一个标准化的环境，配备了 51 个专业的 AI 角色，1500+ 精选技能，以及经过实战检验的架构。
+
+无论您是在规划 SaaS MVP 还是执行复杂的安全审计，Antigravity 都能为您的 AI 代理提供所需的上下文、规则和工作流，确保它们从第一天起就能编写完美的代码。
 
 一条命令。所有 IDE 均可使用。包含所有技能。无供应商锁定（Zero lock-in）。
 
 ```bash
-python init_vibe_project.py my-app
+npx antigravity-awesome-workspace-skill my-app
 # → 26 core skills, 51 agents, 79 commands, 25 MCP servers, Docker, CI/CD, OpenSpec... 瞬间完成。
 ```
 
@@ -257,6 +273,22 @@ test -d .agent/skills && echo "✅ Vibe Code Workspace initialized successfully!
 
 ---
 
+## ❓ 常见问题 (FAQ)
+
+**问：我必须使用 Antigravity IDE 才能使用此工作区吗？**
+答：不需要！此工作区是 100% 框架无关的。通过带有特定标志的 `npx` 安装程序（例如：`--claude`, `--cursor`），您可以仅注入您的 IDE（Claude Code, Cursor, Windsurf, Copilot 等）期望的本地规则，而无需锁定在任何单一的生态系统中。
+
+**问：安装 1500+ 项技能会使我的 AI 上下文窗口超载吗？**
+答：不会。默认情况下，安装程序仅将 **26 项核心技能 (Core Skills)** 加载到活动目录 `.agent/skills/` 中。剩余的 1500+ 项技能位于非活动的 `skill_library/` 文件夹中。您只需按需复制所需的技能即可，从而保持 AI 上下文的精简和高效。
+
+**问：我可以将其添加到现有的代码库中吗？**
+答：可以。虽然建议初始化新项目，但您也可以在现有存储库中运行 `npx` 命令。它会将 `.agent/`、`.github/` 和特定 IDE 的配置注入到您的代码库中，而不会删除您现有的工作。
+
+**问：“Vibe Code”是什么意思？**
+答：Vibe Coding（氛围编程）是指在人工智能辅助下进行编程的方式，人类负责提供高级意图、“氛围”和架构方向，而一组 AI 代理群则处理语法、测试和具体实现细节。此工作区提供了必要的护栏，以确保 Vibe Coding 安全且达到生产标准。
+
+---
+
 ## 📚 参考文献与灵感
 
 此模板受到 AI 编程社区中以下优秀的开源项目的启发，并引用了这些项目：
@@ -265,7 +297,7 @@ test -d .agent/skills && echo "✅ Vibe Code Workspace initialized successfully!
 <tr>
 <td align="center" width="120">
 <a href="https://github.com/affaan-m/everything-claude-code">
-<img src="https://img.shields.io/github/stars/affaan-m/everything-claude-code?style=social" alt="Stars"/>
+<img src="https://badgen.net/github/stars/affaan-m/everything-claude-code" alt="Stars"/>
 </a>
 </td>
 <td>

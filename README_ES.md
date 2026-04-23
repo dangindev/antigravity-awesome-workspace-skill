@@ -28,18 +28,34 @@ Idioma: [English](README.md) | [Tiếng Việt](README_VI.md) | [简体中文](R
 
 ---
 
-> **Consolidación de los 4 mejores sistemas de Vibe Code del mundo** en una sola plantilla lista para producción. Ejecuta `python init_vibe_project.py my-app` y obtendrás todo al instante.
+> **Consolidación de los 4 mejores sistemas de Vibe Code del mundo** en una sola plantilla lista para producción. Ejecuta `npx antigravity-awesome-workspace-skill my-app` y obtendrás todo al instante.
 
 <br/>
 
+## 📑 Tabla de Contenidos
+
+- [🎯 ¿Qué es esto?](#-qué-es-esto)
+- [🚀 Inicio rápido](#-inicio-rápido)
+- [🛠️ Elige tu herramienta](#️-elige-tu-herramienta-choose-your-tool)
+- [📐 Arquitectura y Ciclo de vida](#-arquitectura-architecture)
+- [📦 ¿Qué incluye?](#-qué-incluye-whats-included)
+- [📖 Biblioteca de Habilidades](#-biblioteca-de-habilidades-skill-library---1500)
+- [🛡️ Seguridad](#️-seguridad)
+- [❓ Preguntas frecuentes (FAQ)](#-preguntas-frecuentes-faq)
+- [📚 Referencias e Inspiración](#-referencias-e-inspiración)
+
+---
+
 ## 🎯 ¿Qué es esto?
 
-La **plantilla de workspace de codificación agéntica con IA más completa**: un andamiaje listo para producción con todo lo que necesitas para construir software con agentes de codificación de IA.
+Este workspace elimina la brecha entre las herramientas de IA en bruto y la ingeniería de software lista para producción. Proporciona un entorno estandarizado equipado con 51 personajes de IA especializados, más de 1500 habilidades seleccionadas y una arquitectura probada en batalla.
+
+Ya sea que estés planificando un MVP de SaaS o realizando auditorías de seguridad complejas, Antigravity proporciona el andamiaje para que tus agentes de IA tengan el contexto, las reglas y los flujos de trabajo que necesitan para escribir código perfecto desde el primer día.
 
 Un comando. Todos los IDEs. Todas las habilidades. Sin bloqueo de proveedor (Zero lock-in).
 
 ```bash
-python init_vibe_project.py my-app
+npx antigravity-awesome-workspace-skill my-app
 # → 26 core skills, 51 agents, 79 commands, 25 MCP servers, Docker, CI/CD, OpenSpec... hecho.
 ```
 
@@ -257,6 +273,22 @@ Usa el comando `/plan` o pide al agente `planner` que planifique un SaaS MVP.
 
 ---
 
+## ❓ Preguntas frecuentes (FAQ)
+
+**P: ¿Necesito usar Antigravity IDE para usar este workspace?**
+R: ¡No! Este workspace es 100% agnóstico al marco de trabajo. Usando el instalador `npx` con banderas específicas (ej. `--claude`, `--cursor`), puedes inyectar reglas nativas para Claude Code, Cursor, Windsurf o Copilot sin estar atado a ningún ecosistema.
+
+**P: ¿Instalar más de 1500 habilidades sobrecargará la ventana de contexto de mi IA?**
+R: No. Por defecto, el instalador solo carga las **26 habilidades principales (Core Skills)** en tu directorio activo `.agent/skills/`. Las más de 1500 habilidades restantes residen en la carpeta inactiva `skill_library/`. Solo copias las habilidades específicas que necesitas bajo demanda, manteniendo el contexto de tu IA nítido y económico.
+
+**P: ¿Puedo añadir esto a un código fuente existente?**
+R: Sí. Aunque se recomienda inicializar un proyecto nuevo, puedes ejecutar el comando `npx` en tu repositorio existente. Inyectará el directorio `.agent/`, `.github/` y las configuraciones específicas del IDE junto a tu código existente sin eliminar tu trabajo.
+
+**P: ¿Qué es "Vibe Code"?**
+R: Vibe Coding (Programación de Ambiente) se refiere a la programación asistida por IA donde el humano proporciona la intención de alto nivel, el "ambiente" y la dirección arquitectónica, mientras que un enjambre de agentes de IA se encarga de la sintaxis, las pruebas y la implementación. Este workspace proporciona las barreras de seguridad para que Vibe Coding sea seguro y esté listo para producción.
+
+---
+
 ## 📚 Referencias e Inspiración
 
 Esta plantilla está inspirada y hace referencia a estos destacados proyectos de código abierto en la comunidad de codificación de IA:
@@ -265,7 +297,7 @@ Esta plantilla está inspirada y hace referencia a estos destacados proyectos de
 <tr>
 <td align="center" width="120">
 <a href="https://github.com/affaan-m/everything-claude-code">
-<img src="https://img.shields.io/github/stars/affaan-m/everything-claude-code?style=social" alt="Stars"/>
+<img src="https://badgen.net/github/stars/affaan-m/everything-claude-code" alt="Stars"/>
 </a>
 </td>
 <td>

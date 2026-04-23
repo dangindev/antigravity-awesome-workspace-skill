@@ -28,13 +28,29 @@ Ngôn ngữ: [English](README.md) | **Tiếng Việt** | [简体中文](README_C
 
 ---
 
-> **Hội tụ từ 4 hệ thống Vibe Code hàng đầu thế giới** vào một workspace template duy nhất, sẵn sàng cho môi trường production. Chỉ cần một lệnh `python init_vibe_project.py my-app` và bạn có tất cả.
+> **Hội tụ từ 4 hệ thống Vibe Code hàng đầu thế giới** vào một workspace template duy nhất, sẵn sàng cho môi trường production. Chỉ cần một lệnh `npx antigravity-awesome-workspace-skill my-app` và bạn có tất cả.
 
 <br/>
 
+## 📑 Mục lục (Table of Contents)
+
+- [🎯 Đây là gì?](#-đây-là-gì)
+- [🚀 Bắt đầu nhanh](#-bắt-đầu-nhanh-quick-start)
+- [🛠️ Lựa chọn Công cụ](#️-lựa-chọn-công-cụ-choose-your-tool)
+- [📐 Kiến trúc & Vòng đời](#-kiến-trúc-architecture)
+- [📦 Có gì bên trong?](#-có-gì-bên-trong-whats-included)
+- [📖 Thư viện Kỹ năng](#-thư-viện-kỹ-năng-skill-library---1500)
+- [🛡️ Bảo mật](#️-bảo-mật-security)
+- [❓ Câu hỏi thường gặp (FAQ)](#-câu-hỏi-thường-gặp-faq)
+- [📚 Tài liệu tham khảo](#-tài-liệu-tham-khảo-references--inspiration)
+
+---
+
 ## 🎯 Đây là gì?
 
-**Mẫu workspace AI Agentic Coding toàn diện nhất** — một bộ khung hoàn chỉnh cung cấp mọi thứ bạn cần để xây dựng phần mềm với AI Agents.
+Workspace này xóa bỏ ranh giới giữa các công cụ AI thô sơ và môi trường phát triển phần mềm chuẩn production. Nó cung cấp một môi trường được chuẩn hóa với 51 AI Personas chuyên biệt, 1500+ kỹ năng được chắt lọc và một kiến trúc đã được kiểm chứng thực tế.
+
+Cho dù bạn đang lên kế hoạch cho một MVP SaaS hay thực hiện các đợt kiểm tra bảo mật phức tạp, Antigravity cung cấp bộ khung vững chắc để các AI agents của bạn có đầy đủ ngữ cảnh, bộ quy tắc, và quy trình làm việc cần thiết để viết code hoàn hảo ngay từ ngày đầu tiên.
 
 Một câu lệnh duy nhất. Mọi IDE. Tất cả kỹ năng. Không bị giới hạn (Zero lock-in).
 
@@ -257,6 +273,22 @@ Sử dụng lệnh `/plan` hoặc yêu cầu agent `planner` lên ý tưởng ch
 
 ---
 
+## ❓ Câu hỏi thường gặp (FAQ)
+
+**H: Tôi có bắt buộc phải dùng Antigravity IDE không?**
+Đ: Không! Workspace này 100% framework-agnostic. Thông qua bộ cài đặt `npx` với các flag (ví dụ: `--claude`, `--cursor`), bạn có thể chỉ inject đúng những bộ rule bản địa mà IDE của bạn (Claude Code, Cursor, Windsurf) yêu cầu, mà không lo bị trói buộc vào một hệ sinh thái cụ thể nào.
+
+**H: Việc tải xuống 1500+ skills có làm quá tải context window của AI không?**
+Đ: Không. Mặc định, công cụ cài đặt chỉ nạp **26 Kỹ năng cốt lõi (Core Skills)** vào thư mục hoạt động `.agent/skills/`. Toàn bộ 1500+ skills còn lại được lưu ở chế độ ngủ (inactive) trong thư mục `skill_library/`. Bạn chỉ cần copy những kỹ năng bạn cần vào lúc đó, giúp tiết kiệm chi phí và giữ AI luôn tập trung cao độ.
+
+**H: Tôi có thể cài công cụ này vào một codebase đang có sẵn không?**
+Đ: Có. Mặc dù chúng tôi khuyến khích khởi tạo dự án mới, bạn vẫn có thể chạy lệnh `npx` bên trong kho lưu trữ hiện tại của mình. Công cụ sẽ bổ sung `.agent/`, `.github/` và các file cấu hình IDE vào cùng với source code hiện tại của bạn mà không hề xóa đi bất kỳ file nào.
+
+**H: "Vibe Code" nghĩa là gì?**
+Đ: Vibe Coding là phương pháp lập trình AI trong đó con người cung cấp mục tiêu cấp cao, cảm hứng ("vibe") và định hướng kiến trúc, trong khi một bầy đàn AI agents sẽ lo liệu cú pháp, viết test và triển khai chi tiết. Workspace này cung cấp mọi rào chắn bảo vệ để việc Vibe Coding diễn ra an toàn và đáp ứng tiêu chuẩn production.
+
+---
+
 ## 📚 Tham khảo & Nguồn cảm hứng
 
 Template này được truyền cảm hứng và tham khảo từ các dự án mã nguồn mở xuất sắc trong cộng đồng AI coding:
@@ -265,7 +297,7 @@ Template này được truyền cảm hứng và tham khảo từ các dự án 
 <tr>
 <td align="center" width="120">
 <a href="https://github.com/affaan-m/everything-claude-code">
-<img src="https://img.shields.io/github/stars/affaan-m/everything-claude-code?style=social" alt="Stars"/>
+<img src="https://badgen.net/github/stars/affaan-m/everything-claude-code" alt="Stars"/>
 </a>
 </td>
 <td>

@@ -28,13 +28,29 @@ Language: **English** | [Tiếng Việt](README_VI.md) | [简体中文](README_C
 
 ---
 
-> **Consolidated from 4 world-class Vibe Code systems** into a single, production-ready workspace template. One `python init_vibe_project.py my-app` and you get everything.
+> **Consolidated from 4 world-class Vibe Code systems** into a single, production-ready workspace template. One `npx antigravity-awesome-workspace-skill my-app` and you get everything.
 
 <br/>
 
+## 📑 Table of Contents
+
+- [🎯 What is This?](#-what-is-this)
+- [🚀 Quick Start](#-quick-start)
+- [🛠️ Choose Your Tool](#️-choose-your-tool)
+- [📐 Architecture & Lifecycle](#-architecture)
+- [📦 What's Included](#-whats-included)
+- [📖 Skill Library](#-skill-library)
+- [🛡️ Security](#️-security)
+- [❓ FAQ](#-faq)
+- [📚 References & Inspiration](#-references--inspiration)
+
+---
+
 ## 🎯 What is This?
 
-The **most comprehensive AI Agentic Coding workspace template** — a production-ready scaffold with everything you need to build software with AI coding agents.
+This workspace bridges the gap between raw AI tools and production-ready software engineering. It provides a standardized environment equipped with 51 specialized AI personas, 1500+ curated skills, and a battle-tested architecture. 
+
+Whether you're planning a SaaS MVP or performing complex security audits, Antigravity provides the scaffolding so your AI agents have the context, rules, and workflows they need to write perfect code from day one.
 
 One command. Every IDE. All the skills. Zero lock-in.
 
@@ -557,6 +573,22 @@ cp .env.example .env
 
 ---
 
+## ❓ FAQ
+
+**Q: Do I need to use Antigravity IDE to use this workspace?**
+A: No! This workspace is 100% framework-agnostic. By using the `npx` installer with specific flags (e.g., `--claude`, `--cursor`), you can inject native rules for Claude Code, Cursor, Windsurf, or Copilot without locking into any single ecosystem.
+
+**Q: Will installing 1500+ skills overload my AI's context window?**
+A: No. By default, the installer only loads the **26 Core Skills** into your active `.agent/skills/` directory. The remaining 1500+ skills reside in the inactive `skill_library/` folder. You only copy the specific skills you need on-demand, keeping your AI context sharp and inexpensive.
+
+**Q: Can I add this to an existing codebase?**
+A: Yes. While it's recommended to initialize a new project, you can run the `npx` command in your existing repository. It will inject the `.agent/`, `.github/`, and IDE-specific configurations alongside your existing code without deleting your work.
+
+**Q: What is "Vibe Code"?**
+A: Vibe Coding refers to AI-assisted programming where the human provides the high-level intent, "vibe", and architectural direction, while a swarm of AI agents handles the syntax, testing, and implementation. This workspace provides the guardrails to make Vibe Coding safe and production-ready.
+
+---
+
 ## 📚 References & Inspiration
 
 This template is inspired by and references these outstanding open-source projects in the AI coding community:
@@ -565,7 +597,7 @@ This template is inspired by and references these outstanding open-source projec
 <tr>
 <td align="center" width="120">
 <a href="https://github.com/affaan-m/everything-claude-code">
-<img src="https://img.shields.io/github/stars/AffaanMustafa/everything-claude-code?style=social" alt="Stars"/>
+<img src="https://img.shields.io/github/stars/affaan-m/everything-claude-code?style=social" alt="Stars"/>
 </a>
 </td>
 <td>
@@ -691,7 +723,7 @@ If this workspace template saves you hours of setup time, **please consider star
 
 ### ⭐ Star the Referenced Projects Too!
 
-<a href="https://github.com/affaan-m/everything-claude-code"><img src="https://img.shields.io/github/stars/AffaanMustafa/everything-claude-code?style=social&label=Everything%20Claude%20Code" alt="ECC Stars"/></a>
+<a href="https://github.com/affaan-m/everything-claude-code"><img src="https://img.shields.io/github/stars/affaan-m/everything-claude-code?style=social&label=Everything%20Claude%20Code" alt="ECC Stars"/></a>
 &nbsp;&nbsp;
 <a href="https://github.com/addyosmani/agent-skills"><img src="https://img.shields.io/github/stars/addyosmani/agent-skills?style=social&label=Agent%20Skills" alt="Agent Skills Stars"/></a>
 &nbsp;&nbsp;
