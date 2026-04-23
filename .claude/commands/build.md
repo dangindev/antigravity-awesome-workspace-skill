@@ -16,3 +16,4 @@ Pick the next pending task from the plan. For each task:
 8. Mark the task complete and move to the next one
 
 If any step fails, follow the agent-skills:debugging-and-error-recovery skill.
+ 
